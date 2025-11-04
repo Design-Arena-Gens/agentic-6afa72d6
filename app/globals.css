@@ -1,0 +1,23 @@
+:root{--bg:#0b0f1a;--fg:#e5e7eb;--muted:#9ca3af;--accent:#22c55e;--surface:#111827;--surface-2:#0f172a;--border:#1f2937}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;height:100%;background:var(--bg);color:var(--fg);font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji}
+body{display:flex;min-height:100vh}
+#app{display:flex;flex-direction:column;height:100vh;width:100vw;overflow:hidden}
+.header{display:flex;gap:.5rem;align-items:center;padding:.5rem;border-bottom:1px solid var(--border);background:linear-gradient(180deg,var(--surface),var(--surface-2));position:sticky;top:0;z-index:10}
+.input{flex:1;display:flex;align-items:center;background:#0b1220;border:1px solid var(--border);border-radius:999px;padding:.4rem .75rem;gap:.5rem}
+.input input{all:unset;color:var(--fg);font-size:14px;flex:1}
+.icon-btn{all:unset;display:inline-grid;place-items:center;width:36px;height:36px;border-radius:999px;background:#0b1220;border:1px solid var(--border);cursor:pointer;color:var(--fg)}
+.icon-btn:active{transform:scale(.98)}
+.tabs{display:flex;gap:.4rem;overflow-x:auto;padding:.4rem .6rem;background:var(--surface-2);border-bottom:1px solid var(--border)}
+.tab{padding:.3rem .6rem;border:1px solid var(--border);border-radius:999px;background:#0b1220;color:var(--fg);font-size:12px;white-space:nowrap;display:flex;align-items:center;gap:.35rem}
+.tab.active{background:#0f1a2a;border-color:#2b3648}
+.webview{flex:1;position:relative;background:#000}
+.webview iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#fff}
+.footer{display:flex;gap:.6rem;align-items:center;justify-content:space-around;padding:.5rem;border-top:1px solid var(--border);background:linear-gradient(0deg,var(--surface),var(--surface-2))}
+.badge{background:#102231;border:1px solid var(--border);padding:.15rem .45rem;border-radius:999px;color:var(--muted);font-size:11px}
+.menu{position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--border);padding:.75rem;max-height:70vh;overflow:auto;box-shadow:0 -8px 32px rgba(0,0,0,.35);}
+.menu h3{margin:.25rem 0 .5rem;font-size:14px;color:var(--muted)}
+.list{display:flex;flex-direction:column;gap:.35rem}
+.list button{all:unset;padding:.45rem .6rem;border:1px solid var(--border);border-radius:8px;background:#0b1220;color:var(--fg);cursor:pointer}
+hr{border:0;border-top:1px solid var(--border);margin:.6rem 0}
+.hidden{display:none}
